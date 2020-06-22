@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphQLNetCore.Api", "GraphQLNetCore.Api\GraphQLNetCore.Api.csproj", "{DF71D9E0-8FBE-4C65-BC5D-2222EE5173E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQLNetCore.Entities", "GraphQLNetCore.Entities\GraphQLNetCore.Entities.csproj", "{03AC9FB3-D711-46FA-A76E-C81687227AEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQLNetCore.Data", "GraphQLNetCore.Data\GraphQLNetCore.Data.csproj", "{16596D0E-332F-4BD7-8604-E696EEDAA8C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQLNetCore.Utils", "GraphQLNetCore.Utils\GraphQLNetCore.Utils.csproj", "{07CF309D-2841-4F05-B0CC-037044987AE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQLNetCore.Types", "GraphQLNetCore.Types\GraphQLNetCore.Types.csproj", "{5612A6D7-FCE3-4E24-849C-888DC60ADB2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF71D9E0-8FBE-4C65-BC5D-2222EE5173E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF71D9E0-8FBE-4C65-BC5D-2222EE5173E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF71D9E0-8FBE-4C65-BC5D-2222EE5173E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF71D9E0-8FBE-4C65-BC5D-2222EE5173E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03AC9FB3-D711-46FA-A76E-C81687227AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03AC9FB3-D711-46FA-A76E-C81687227AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03AC9FB3-D711-46FA-A76E-C81687227AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03AC9FB3-D711-46FA-A76E-C81687227AEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16596D0E-332F-4BD7-8604-E696EEDAA8C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16596D0E-332F-4BD7-8604-E696EEDAA8C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16596D0E-332F-4BD7-8604-E696EEDAA8C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16596D0E-332F-4BD7-8604-E696EEDAA8C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07CF309D-2841-4F05-B0CC-037044987AE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07CF309D-2841-4F05-B0CC-037044987AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07CF309D-2841-4F05-B0CC-037044987AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07CF309D-2841-4F05-B0CC-037044987AE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5612A6D7-FCE3-4E24-849C-888DC60ADB2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5612A6D7-FCE3-4E24-849C-888DC60ADB2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5612A6D7-FCE3-4E24-849C-888DC60ADB2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5612A6D7-FCE3-4E24-849C-888DC60ADB2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {084348F5-9CB3-4C4B-8185-38BFA4E97614}
+	EndGlobalSection
+EndGlobal
