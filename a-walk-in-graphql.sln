@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphQLNetCore.Data", "Grap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphQLNetCore.Utils", "GraphQLNetCore.Utils\GraphQLNetCore.Utils.csproj", "{07CF309D-2841-4F05-B0CC-037044987AE7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphQLNetCore.Types", "GraphQLNetCore.Types\GraphQLNetCore.Types.csproj", "{5612A6D7-FCE3-4E24-849C-888DC60ADB2B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQLNetCore.DatabaseSeedHelper", "GraphQLNetCore.DatabaseSeedHelper\GraphQLNetCore.DatabaseSeedHelper.csproj", "{FD83D12A-8112-4726-81C5-CB7C43128793}"
 EndProject
 Global
@@ -37,10 +35,6 @@ Global
 		{07CF309D-2841-4F05-B0CC-037044987AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07CF309D-2841-4F05-B0CC-037044987AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07CF309D-2841-4F05-B0CC-037044987AE7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5612A6D7-FCE3-4E24-849C-888DC60ADB2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5612A6D7-FCE3-4E24-849C-888DC60ADB2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5612A6D7-FCE3-4E24-849C-888DC60ADB2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5612A6D7-FCE3-4E24-849C-888DC60ADB2B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FD83D12A-8112-4726-81C5-CB7C43128793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FD83D12A-8112-4726-81C5-CB7C43128793}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD83D12A-8112-4726-81C5-CB7C43128793}.Release|Any CPU.ActiveCfg = Release|Any CPU

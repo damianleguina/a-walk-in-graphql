@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GraphQLNetCore.Types
+namespace GraphQLNetCore.Api.GraphQL.Types
 {
     class PersonType
     {

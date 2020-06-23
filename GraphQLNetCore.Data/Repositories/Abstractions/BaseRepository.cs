@@ -19,10 +19,6 @@ namespace GraphQLNetCore.Data.Repositories.Abstractions
 
         #region Constructors
 
-        public BaseRepository()
-        {
-        }
-
         public BaseRepository(GraphQLContext context)
         {
             this.context = context;

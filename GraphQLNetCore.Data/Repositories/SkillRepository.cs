@@ -6,5 +6,8 @@ namespace GraphQLNetCore.Data.Repositories
 {
     public class SkillRepository : BaseRepository<Skill>, ISkillRepository
     {
+        public SkillRepository(GraphQLContext context) : base(context)
+        {
+        }
     }
 }

@@ -6,5 +6,8 @@ namespace GraphQLNetCore.Data.Repositories
 {
     public class PersonRepository : BaseRepository<Person>, IPersonRepository
     {
+        public PersonRepository(GraphQLContext context) : base(context)
+        {
+        }
     }
 }

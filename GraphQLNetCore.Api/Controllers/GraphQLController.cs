@@ -38,7 +38,7 @@ namespace GraphQLNetCore.Api.Controllers
 
             var result = await documentExecuter.ExecuteAsync(executionOption);
 
-            if (result.Errors.Any())
+            if (result.Errors != null && result.Errors.Any())
             {
                 return BadRequest(result);
             }
