@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GraphQLNetCore.DatabaseSeedHelper\GraphQLNetCore.DatabaseSeedHelper.csproj" />
     <ProjectReference Include="..\GraphQLNetCore.Data\GraphQLNetCore.Data.csproj" />
     <ProjectReference Include="..\GraphQLNetCore.Utils\GraphQLNetCore.Utils.csproj" />
   </ItemGroup>

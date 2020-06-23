@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GraphQLNetCore.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class GraphQLController : ControllerBase
     {

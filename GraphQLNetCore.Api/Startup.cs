@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using GraphQL;
 using GraphQLNetCore.Data;
+using GraphQLNetCore.DatabaseSeedHelper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -46,6 +47,8 @@ namespace GraphQLNetCore.Api
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.SeedDatabase();
 
             app.UseEndpoints(endpoints =>
             {

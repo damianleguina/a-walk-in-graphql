@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using GraphQLNetCore.Entities.Abstractions;
 
 namespace GraphQLNetCore.Entities
 {
-    public class Skill
+    public class Skill : BaseEntity
     {
-        public string Id { get; set; }
-        public string Parent { get; set; }
+        public int? ParentId { get; set; }
         public string Name { get; set; }
+
+        public Skill Parent { get; set; }
     }
 }
