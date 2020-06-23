@@ -36,10 +36,12 @@ namespace GraphQLNetCore.Api
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
 );
             services.AddDbContext<GraphQLContext>(x => x.UseInMemoryDatabase("GraphQLDb"));
-            services.AddScoped(typeof(ISkillRepository), typeof(SkillRepository));
             services.AddSingleton<IDocumentExecuter, DocumentExecuter>();
-            services.AddScoped<SkillQuery>();
+            services.AddScoped(typeof(ISkillRepository), typeof(SkillRepository));
+            services.AddScoped(typeof(IPersonRepository), typeof(PersonRepository));
+            services.AddScoped<RootQuery>();
             services.AddScoped<SkillType>();
+            services.AddScoped<PersonType>();
             var sp = services.BuildServiceProvider();
             services.AddSingleton<ISchema>(new GraphQLSchema(new FuncDependencyResolver(type => sp.GetService(type))));
         }

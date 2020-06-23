@@ -1,10 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using GraphQL.Types;
+using GraphQLNetCore.Entities;
 
 namespace GraphQLNetCore.Api.GraphQL.Types
 {
-    class PersonType
+    public class PersonType : ObjectGraphType<Person>
     {
+        public PersonType()
+        {
+            Field(x => x.Id);
+            Field(x => x.Age);
+            Field(x => x.EyeColor);
+            Field(x => x.Name);
+            Field(x => x.Surname);
+            Field(x => x.Email);
+            Field(x => x.FavSkillId, nullable: true, type: typeof(IntGraphType));
+            Field<ListGraphType<PersonType>>("friends", resolve: context => context.Source.Friends);
+            Field<ListGraphType<SkillType>>("skills", resolve: context => context.Source.Skills);
+        }
     }
 }

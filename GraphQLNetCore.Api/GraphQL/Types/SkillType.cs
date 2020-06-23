@@ -9,6 +9,8 @@ namespace GraphQLNetCore.Api.GraphQL.Types
         {
             Field(x => x.Id);
             Field(x => x.Name);
+            Field(x => x.ParentId, nullable: true, type: typeof(IntGraphType));
+            Field<SkillType>("Parent", resolve: context => context.Source.Parent);
         }
     }
 }
