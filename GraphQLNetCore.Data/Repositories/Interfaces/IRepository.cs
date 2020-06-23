@@ -21,5 +21,7 @@ namespace GraphQLNetCore.Data.Repositories.Interfaces
         TEntity GetById(int id, string includeProperties = "");
 
         TEntity Update(TEntity entity, TEntity newValues);
+
+        TEntity Random();
     }
 }

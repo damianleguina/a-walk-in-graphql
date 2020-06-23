@@ -85,6 +85,11 @@ namespace GraphQLNetCore.Data.Repositories.Abstractions
             return entity;
         }
 
+        public virtual TEntity Random()
+        {
+            return this.dbSet.OrderBy(x => Guid.NewGuid()).Take(1).FirstOrDefault();
+        }
+
         #endregion Public Methods
     }
 }

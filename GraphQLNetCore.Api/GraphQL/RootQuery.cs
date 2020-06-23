@@ -22,6 +22,16 @@ namespace GraphQLNetCore.Api.GraphQL
                 "skills",
                 resolve: context => skillRepository.Get()
             );
+            Field<PersonType>
+            (
+                "randomPerson",
+                resolve: context => personRepository.Random()
+            );
+            Field<SkillType>
+            (
+                "randomSkill",
+                resolve: context => skillRepository.Random()
+            );
         }
     }
 }
