@@ -9,7 +9,7 @@ namespace GraphQLNetCore.Entities
         {
             this.Friends = new HashSet<Person>();
             this.Skills = new HashSet<Skill>();
-        } 
+        }
 
         public int Age { get; set; }
         public string EyeColor { get; set; }

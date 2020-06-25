@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using GraphQL;
 using GraphQL.Types;
+using GraphQLNetCore.Api.GraphQL;
 using GraphQLNetCore.Utils;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,6 +17,7 @@ namespace GraphQLNetCore.Api.Controllers
     {
         private readonly ISchema schema;
         private readonly IDocumentExecuter documentExecuter;
+
         public GraphQLController(ISchema schema, IDocumentExecuter documentExecuter)
         {
             this.schema = schema;

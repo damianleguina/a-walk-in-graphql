@@ -2,15 +2,11 @@ using GraphQL;
 using GraphQL.Server.Ui.Playground;
 using GraphQL.Types;
 using GraphQLNetCore.Api.GraphQL;
-using GraphQLNetCore.Api.GraphQL.Queries;
 using GraphQLNetCore.Api.GraphQL.Types;
 using GraphQLNetCore.Data;
 using GraphQLNetCore.Data.Repositories;
-using GraphQLNetCore.Data.Repositories.Abstractions;
-using GraphQLNetCore.Data.Repositories.Interfaces;
 using GraphQLNetCore.Data.Repositories.Interfaces.Entities;
 using GraphQLNetCore.DatabaseSeedHelper;
-using GraphQLNetCore.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -29,21 +25,17 @@ namespace GraphQLNetCore.Api
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers().AddNewtonsoftJson(options =>
-                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-);
-            services.AddDbContext<GraphQLContext>(x => x.UseInMemoryDatabase("GraphQLDb"));
+            services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            services.AddDbContext<GraphQLContext>(options => options.UseInMemoryDatabase(databaseName: "GraphQLDb"), ServiceLifetime.Singleton);
+            services.AddSingleton<ISkillRepository, SkillRepository>();
+            services.AddSingleton<IPersonRepository, PersonRepository>();
             services.AddSingleton<IDocumentExecuter, DocumentExecuter>();
-            services.AddScoped(typeof(ISkillRepository), typeof(SkillRepository));
-            services.AddScoped(typeof(IPersonRepository), typeof(PersonRepository));
-            services.AddScoped<RootQuery>();
-            services.AddScoped<SkillType>();
-            services.AddScoped<PersonType>();
-            var sp = services.BuildServiceProvider();
-            services.AddSingleton<ISchema>(new GraphQLSchema(new FuncDependencyResolver(type => sp.GetService(type))));
+            services.AddSingleton<RootQuery>();
+            services.AddSingleton<SkillType>();
+            services.AddSingleton<PersonType>();
+            services.AddSingleton<ISchema>(s => new GraphQLSchema(new FuncDependencyResolver(type => (IGraphType)s.GetRequiredService(type))));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
